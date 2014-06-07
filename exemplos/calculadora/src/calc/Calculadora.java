@@ -1,7 +1,7 @@
 package calc;
 
 public class Calculadora extends javax.swing.JFrame {
-    
+
     private long buffer;
     private int action = 0;
     private int action_block = 0;
@@ -10,9 +10,9 @@ public class Calculadora extends javax.swing.JFrame {
 
     public Calculadora() {
         initComponents();
-        
+
         tela.setText("0");
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -326,74 +326,73 @@ public class Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
-        
+
         this.addNumTela(1);
-        
+
     }//GEN-LAST:event_btn_1ActionPerformed
 
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
-    
+
         this.addNumTela(3);
-        
+
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
-    
+
         this.addNumTela(2);
-        
+
     }//GEN-LAST:event_btn_2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    
-        
+
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
-        
+
         this.addNumTela(4);
-        
+
     }//GEN-LAST:event_btn_4ActionPerformed
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
-        
+
         this.addNumTela(5);
-        
+
     }//GEN-LAST:event_btn_5ActionPerformed
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
-        
+
         this.addNumTela(6);
-        
+
     }//GEN-LAST:event_btn_6ActionPerformed
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
-        
+
         this.addNumTela(7);
-        
+
     }//GEN-LAST:event_btn_7ActionPerformed
 
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
-        
+
         this.addNumTela(8);
-        
+
     }//GEN-LAST:event_btn_8ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
-        
+
         this.addNumTela(9);
-        
+
     }//GEN-LAST:event_btn_9ActionPerformed
 
     private void btn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_0ActionPerformed
-        
+
         this.addNumTela(0);
-        
+
     }//GEN-LAST:event_btn_0ActionPerformed
 
     private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divActionPerformed
@@ -405,57 +404,64 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_mulActionPerformed
 
     private void btn_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_somaActionPerformed
-        
+
         // Guarda o valor da tela no buffer
-        this.buffer = Long.parseLong( this.tela.getText() );
-        
+        this.buffer = Long.parseLong(this.tela.getText());
+
         // Altera a ação
         this.action = 1;
-        
+
         // Altera o bloqueio de tela
         this.tela_block = 1;
-        
+
         // Altera o bloqueio de ação
         this.action_block = 1;
-        
+
         // Troca o sinal
         this.sinal = 0;
-        
+
         this.printLog();
-        
+
     }//GEN-LAST:event_btn_somaActionPerformed
 
     private void btn_subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_subActionPerformed
-        
+
         // Guarda o valor da tela no buffer
-        this.buffer = Long.parseLong( this.tela.getText() );
-        
+        this.buffer = Long.parseLong(this.tela.getText());
+
         // Altera a ação
         this.action = 2;
-        
+
         // Altera o bloqueio de tela
         this.tela_block = 1;
-        
+
         // Altera o bloqueio de ação
         this.action_block = 1;
-        
+
         // Troca o sinal
         this.sinal = 1;
-        
+
         this.printLog();
-        
+
     }//GEN-LAST:event_btn_subActionPerformed
 
     private void btn_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_enterActionPerformed
-        
+
         // Pega o valor da tela
-        long tela_value = Long.parseLong( this.tela.getText() );
-        
+        long tela_value = Long.parseLong(this.tela.getText());
+
         // Resultado
         long result = 0;
+
+        // Verifica o sinal
+        if (this.sinal == 1) {
+
+            // Altera o valor do buffer
+            tela_value = -tela_value;
+        }
         
-        switch(this.action) {
-            
+        switch (this.action) {
+
             // Soma
             case 1:
                 result = Processador.somar(this.buffer, tela_value);
@@ -465,23 +471,31 @@ public class Calculadora extends javax.swing.JFrame {
                 result = Processador.subtrair(this.buffer, tela_value);
                 break;
         }
-        
-        if( this.action_block == 1 ) {
-            
-            // Altera o valor do buffer
-            this.buffer = Long.parseLong( tela.getText() );
-            
+
+        if (this.action_block == 1) {
+
+            // Verifica o sinal
+            if (this.sinal == 1) {
+
+                // Altera o valor do buffer
+                this.buffer = -Long.parseLong(this.tela.getText());
+            } else {
+
+                // Altera o valor do buffer
+                this.buffer = Long.parseLong(this.tela.getText());
+            }
+
             // Altera o bloqueio de ação
             this.action_block = 0;
         }
-        
-        tela.setText( Long.toString(result) );
-        
+
+        tela.setText(Long.toString(result));
+
         // Troca o sinal
         this.sinal = 0;
-        
+
         this.printLog();
-        
+
     }//GEN-LAST:event_btn_enterActionPerformed
 
     private void btn_cleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cleanActionPerformed
@@ -519,36 +533,36 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
     }
-    
+
     /**
      * Adiciona um número na tela.
-     * 
+     *
      * @param num Número a ser adicionado.
      */
     public void addNumTela(int num) {
 
-        if( this.tela_block == 0 ) {
+        if (this.tela_block == 0) {
             Processador.addNumTela(this.tela, num);
         } else {
-           this.tela.setText("");
-           Processador.addNumTela(this.tela, num);
-           this.tela_block = 0;
+            this.tela.setText("");
+            Processador.addNumTela(this.tela, num);
+            this.tela_block = 0;
         }
 
-        this.printLog();   
-        
+        this.printLog();
+
     }
-    
+
     public void printLog() {
-        System.out.println( "Tela Block: " + this.tela_block );
-        System.out.println( "Action: " + this.action );
-        System.out.println( "Action Block: " + this.action_block );
-        System.out.println( "Buffer: " + this.buffer );
-        System.out.println( "Tela: " + tela.getText() );
-        System.out.println( "Sinal: " + this.sinal );
+        System.out.println("Tela Block: " + this.tela_block);
+        System.out.println("Action: " + this.action);
+        System.out.println("Action Block: " + this.action_block);
+        System.out.println("Buffer: " + this.buffer);
+        System.out.println("Tela: " + tela.getText());
+        System.out.println("Sinal: " + this.sinal);
         System.out.println("");
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_0;
     private javax.swing.JButton btn_1;

@@ -14,6 +14,10 @@ public class Processador {
         
         String tela_cache = tela.getText();
         
+        if( "0".equals(tela_cache)) {
+            tela_cache = "";
+        }
+        
         tela.setText(tela_cache + Integer.toString(num));
         
     }
