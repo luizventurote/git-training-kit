@@ -31,4 +31,17 @@ public class Processador {
         
     }
     
+    /**
+     * Subtração
+     * 
+     * @param num1
+     * @param num2
+     * @return Resultado da subtração
+     */
+    public static long subtrair(long num1, long num2) {
+        
+        return num1 + num2;
+        
+    }
+    
 }

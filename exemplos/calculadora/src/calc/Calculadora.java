@@ -6,9 +6,13 @@ public class Calculadora extends javax.swing.JFrame {
     private int action = 0;
     private int action_block = 0;
     private int tela_block = 0;
+    private int sinal;
 
     public Calculadora() {
         initComponents();
+        
+        tela.setText("0");
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -414,12 +418,32 @@ public class Calculadora extends javax.swing.JFrame {
         // Altera o bloqueio de ação
         this.action_block = 1;
         
+        // Troca o sinal
+        this.sinal = 0;
+        
         this.printLog();
         
     }//GEN-LAST:event_btn_somaActionPerformed
 
     private void btn_subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_subActionPerformed
-        // TODO add your handling code here:
+        
+        // Guarda o valor da tela no buffer
+        this.buffer = Long.parseLong( this.tela.getText() );
+        
+        // Altera a ação
+        this.action = 2;
+        
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
+        
+        // Altera o bloqueio de ação
+        this.action_block = 1;
+        
+        // Troca o sinal
+        this.sinal = 1;
+        
+        this.printLog();
+        
     }//GEN-LAST:event_btn_subActionPerformed
 
     private void btn_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_enterActionPerformed
@@ -435,10 +459,15 @@ public class Calculadora extends javax.swing.JFrame {
             // Soma
             case 1:
                 result = Processador.somar(this.buffer, tela_value);
-                break; 
+                break;
+            // Subtração
+            case 2:
+                result = Processador.subtrair(this.buffer, tela_value);
+                break;
         }
         
         if( this.action_block == 1 ) {
+            
             // Altera o valor do buffer
             this.buffer = Long.parseLong( tela.getText() );
             
@@ -447,6 +476,9 @@ public class Calculadora extends javax.swing.JFrame {
         }
         
         tela.setText( Long.toString(result) );
+        
+        // Troca o sinal
+        this.sinal = 0;
         
         this.printLog();
         
@@ -502,7 +534,7 @@ public class Calculadora extends javax.swing.JFrame {
            Processador.addNumTela(this.tela, num);
            this.tela_block = 0;
         }
-        
+
         this.printLog();   
         
     }
@@ -513,6 +545,7 @@ public class Calculadora extends javax.swing.JFrame {
         System.out.println( "Action Block: " + this.action_block );
         System.out.println( "Buffer: " + this.buffer );
         System.out.println( "Tela: " + tela.getText() );
+        System.out.println( "Sinal: " + this.sinal );
         System.out.println("");
     }
     
