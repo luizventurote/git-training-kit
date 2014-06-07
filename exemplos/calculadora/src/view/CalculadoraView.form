@@ -49,50 +49,50 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_4" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton6" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_5" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton7" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_6" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_1" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_2" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_3" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton15" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_soma" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton16" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_sub" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jButton13" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_div" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton14" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_mul" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="tela" alignment="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton12" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="btn_0" min="-2" pref="106" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton17" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="btn_enter" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton8" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_7" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton9" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_8" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton11" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btn_9" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton18" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="btn_clean" min="-2" pref="106" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -105,36 +105,38 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" pref="50" max="-2" attributes="0"/>
+              <Component id="tela" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton8" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton9" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton11" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton18" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_7" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_8" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_9" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_clean" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton7" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton6" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton5" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                      <Component id="jButton13" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jButton14" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="btn_div" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="btn_mul" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_6" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="btn_5" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="btn_4" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton15" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton16" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_2" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_3" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_soma" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_sub" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton12" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton17" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_0" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_enter" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -142,7 +144,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btn_1">
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -151,10 +153,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btn_3">
       <Properties>
         <Property name="text" type="java.lang.String" value="3"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -163,10 +165,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btn_2">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -175,10 +177,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="btn_4">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -187,10 +189,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_4ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="btn_5">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -199,10 +201,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_5ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton7">
+    <Component class="javax.swing.JButton" name="btn_6">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -211,10 +213,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_6ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton8">
+    <Component class="javax.swing.JButton" name="btn_7">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
         <Property name="borderPainted" type="boolean" value="false"/>
@@ -224,10 +226,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_7ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton9">
+    <Component class="javax.swing.JButton" name="btn_8">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -236,10 +238,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_8ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton11">
+    <Component class="javax.swing.JButton" name="btn_9">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -248,10 +250,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_9ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton12">
+    <Component class="javax.swing.JButton" name="btn_0">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -260,10 +262,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_0ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton13">
+    <Component class="javax.swing.JButton" name="btn_div">
       <Properties>
         <Property name="text" type="java.lang.String" value="/"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -272,10 +274,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_divActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton14">
+    <Component class="javax.swing.JButton" name="btn_mul">
       <Properties>
         <Property name="text" type="java.lang.String" value="*"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -284,10 +286,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_mulActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton15">
+    <Component class="javax.swing.JButton" name="btn_soma">
       <Properties>
         <Property name="text" type="java.lang.String" value="+"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -296,10 +298,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_somaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton16">
+    <Component class="javax.swing.JButton" name="btn_sub">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -308,10 +310,10 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_subActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton17">
+    <Component class="javax.swing.JButton" name="btn_enter">
       <Properties>
         <Property name="text" type="java.lang.String" value="ENTER"/>
         <Property name="borderPainted" type="boolean" value="false"/>
@@ -322,17 +324,17 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton17ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_enterActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="tela">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton18">
+    <Component class="javax.swing.JButton" name="btn_clean">
       <Properties>
         <Property name="text" type="java.lang.String" value="Clean"/>
         <Property name="focusPainted" type="boolean" value="false"/>
@@ -341,7 +343,7 @@
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton18ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cleanActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
