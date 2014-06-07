@@ -1,11 +1,10 @@
 package calc;
 
-import javax.swing.JTextField;
-import sun.security.util.BigInt;
-
 public class Calculadora extends javax.swing.JFrame {
     
-    private BigInt buffer;
+    private long buffer;
+    private int action = 0;
+    private int tela_block = 0;
 
     public Calculadora() {
         initComponents();
@@ -329,13 +328,13 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
     
-        this.addNumTela(2);
+        this.addNumTela(3);
         
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
     
-        this.addNumTela(3);
+        this.addNumTela(2);
         
     }//GEN-LAST:event_btn_2ActionPerformed
 
@@ -401,7 +400,16 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_mulActionPerformed
 
     private void btn_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_somaActionPerformed
-        // TODO add your handling code here:
+        
+        // Guarda o valor da tela no buffer
+        this.buffer = Long.parseLong( this.tela.getText() );
+        
+        // Altera a ação
+        this.action = 1;
+        
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
+        
     }//GEN-LAST:event_btn_somaActionPerformed
 
     private void btn_subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_subActionPerformed
@@ -409,7 +417,23 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_subActionPerformed
 
     private void btn_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_enterActionPerformed
-        // TODO add your handling code here:
+        
+        // Pega o valor da tela
+        long tela_value = Long.parseLong( this.tela.getText() );
+        
+        // Resultado
+        long result = 0;
+        
+        switch(this.action) {
+            
+            // Soma
+            case 1:
+                result = Processador.somar(this.buffer, tela_value);
+                break; 
+        }
+        
+        tela.setText( Long.toString(result) );
+        
     }//GEN-LAST:event_btn_enterActionPerformed
 
     private void btn_cleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cleanActionPerformed
@@ -454,7 +478,16 @@ public class Calculadora extends javax.swing.JFrame {
      * @param num Número a ser adicionado.
      */
     public void addNumTela(int num) {
-        Processador.addNumTela(this.tela, num);
+        
+        if( this.tela_block == 0 ) {
+            Processador.addNumTela(this.tela, num);
+        } else {
+           this.tela.setText("");
+           Processador.addNumTela(this.tela, num);
+           this.tela_block = 0;
+        }
+        
+        
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

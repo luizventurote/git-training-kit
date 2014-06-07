@@ -18,4 +18,17 @@ public class Processador {
         
     }
     
+    /**
+     * Soma dois numeros
+     * 
+     * @param num1
+     * @param num2
+     * @return Soma dos números
+     */
+    public static long somar(long num1, long num2) {
+     
+        return num1 + num2;
+        
+    }
+    
 }
