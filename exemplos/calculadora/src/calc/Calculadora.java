@@ -4,6 +4,7 @@ public class Calculadora extends javax.swing.JFrame {
     
     private long buffer;
     private int action = 0;
+    private int action_block = 0;
     private int tela_block = 0;
 
     public Calculadora() {
@@ -410,6 +411,11 @@ public class Calculadora extends javax.swing.JFrame {
         // Altera o bloqueio de tela
         this.tela_block = 1;
         
+        // Altera o bloqueio de ação
+        this.action_block = 1;
+        
+        this.printLog();
+        
     }//GEN-LAST:event_btn_somaActionPerformed
 
     private void btn_subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_subActionPerformed
@@ -432,7 +438,17 @@ public class Calculadora extends javax.swing.JFrame {
                 break; 
         }
         
+        if( this.action_block == 1 ) {
+            // Altera o valor do buffer
+            this.buffer = Long.parseLong( tela.getText() );
+            
+            // Altera o bloqueio de ação
+            this.action_block = 0;
+        }
+        
         tela.setText( Long.toString(result) );
+        
+        this.printLog();
         
     }//GEN-LAST:event_btn_enterActionPerformed
 
@@ -478,7 +494,7 @@ public class Calculadora extends javax.swing.JFrame {
      * @param num Número a ser adicionado.
      */
     public void addNumTela(int num) {
-        
+
         if( this.tela_block == 0 ) {
             Processador.addNumTela(this.tela, num);
         } else {
@@ -487,7 +503,17 @@ public class Calculadora extends javax.swing.JFrame {
            this.tela_block = 0;
         }
         
+        this.printLog();   
         
+    }
+    
+    public void printLog() {
+        System.out.println( "Tela Block: " + this.tela_block );
+        System.out.println( "Action: " + this.action );
+        System.out.println( "Action Block: " + this.action_block );
+        System.out.println( "Buffer: " + this.buffer );
+        System.out.println( "Tela: " + tela.getText() );
+        System.out.println("");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
