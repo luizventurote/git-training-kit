@@ -1,4 +1,4 @@
-package calculadora;
+package calc;
 
 import javax.swing.JTextField;
 
