@@ -490,6 +490,9 @@ public class Calculadora extends javax.swing.JFrame {
         }
 
         tela.setText(Long.toString(result));
+        
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
 
         // Troca o sinal
         this.sinal = 0;
