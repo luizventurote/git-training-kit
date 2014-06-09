@@ -248,6 +248,112 @@
     </article>
   </slide>
 
+  <!-- Tags -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Tags</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2>Tagging</h2>
+      <p>Realizam marcações</p>
+      <p>Geralmente utilizada para releases <b>(v1.0, v2.0, v3.0, ...)</b></p>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Tagging</h2>
+      <div class="box">
+        <p>Lista as tags</p>
+        <pre>$ git tag <br>v0.1 <br>v1.3 </pre>
+      </div>
+      <div class="box">
+        <p>Crie uma tag</p>
+        <pre>$ git tag -a v1.4 -m 'my version 1.4' <br>$ git tag <br>v0.1 <br>v1.3 <br>v1.4</pre>
+      </div>
+    </article>
+  </slide>
+
+  <!-- Branching -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Branching</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Branch</h2>
+      <p>Branches são <b>"ramificações"</b></p>
+      <p>Segmenta e diferencia:
+        <ul>
+          <li>Implementações de funcionalidades</li>
+          <li>Correção de bugs/issues</li>
+          <li>Código estável</li>
+          <li>Código instável</li>
+        </ul>
+      </p>
+      <p>Branch padrão: <b>master</b></p>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Branch</h2>
+      <div class="box">
+        <p>Listar branches</p>
+        <pre>$ git branch</pre>
+      </div>
+      <div class="box">
+        <p>Criar branche</p>
+        <pre>$ git branch &lt;nome_branch&gt;</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Branch</h2>
+      <div class="box">
+        <p>Mudar de branch</p>
+        <pre>$ git checkout &lt;nome_branch&gt;</pre>
+      </div>
+      <div class="box">
+        <p>Deletar branche</p>
+        <pre>$ git branch -d &lt;nome_branch&gt;</pre>
+      </div>
+    </article>
+  </slide>
+
+  <!-- Merge -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Merge</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Merge</h2>
+      <div class="box">
+        <p>Junta dois branches</p>
+        <pre>$ git checkout master <br>$ git merge &lt;nome_branch&gt;</pre>
+      </div>
+      <div class="box">
+        <p>Listar "Merged brenches"</p>
+        <pre>$ git branch -merged</pre>
+      </div>
+    </article>
+  </slide>
+
+  <!-- Merge -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">GUI</h2>
+      <div class="box">
+        <pre>$ git gui</pre>
+      </div>
+    </article>
+  </slide>
+
+
 </slides>
 
 <script>
