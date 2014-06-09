@@ -66,9 +66,14 @@
   <slide class="fill nobackground" style="background-image: url(images/slides/bash.png)"></slide>
 
   <!-- Configuração -->
-  <slide class="fill nobackground" style="background-image: url(images/slides/config-init.png)"></slide>
-  <slide class="fill nobackground" style="background-image: url(images/slides/config.png);">
-    <article style="margin-top: 180px">
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Configuração inicial do Git</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2>Configuração</h2>
       <p>Configurando usuário</p>
       <pre class="prettyprint">git config --global user.name "luizventurote"</pre>
       <p style="margin-top: 50px">Configurando e-mail</p>
@@ -76,36 +81,170 @@
     </article>
   </slide>
 
+  <!-- Ciclo de vida dos arquivos -->
   <slide class="fill nobackground">
     <article>
-      <p>Criando um repositório local</p>
-      <pre class="prettyprint">cd meuprojeto
-git init</pre>
+      <h2 style="margin-top: 210px;">Ciclo de vida dos arquivos</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <img src="images/lifecycle.png" class="shadow" alt="Description" title="Description">
     </article>
   </slide>
 
+  <!-- Repositório -->
   <slide class="fill nobackground">
     <article>
-      <pre class="prettyprint">git status</pre>
+      <h2>Repositório</h2>
+      <p>Criando um repositório local (<b>.git</b>)</p>
+      <pre class="prettyprint">cd meuprojeto<br>git init</pre>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Verificando o Status</h2>
+      <div class="box">
+        <pre class="prettyprint">git status</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Monitorando Novos Arquivos</h2>
+      <div class="box">
+        <p>Adicionando um arquivo</p>
+        <pre class="prettyprint">git add &lt;arquivo&gt;</pre>
+      </div>
+      <div class="box">
+        <p>Adicionando vários arquivos</p>
+        <pre class="prettyprint">git add .</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Removendo Arquivos</h2>
+      <div class="box">
+        <p>Removendo arquivo</p>
+        <pre class="prettyprint">git rm &lt;arquivo&gt;</pre>
+      </div>
+      <div class="box">
+        <p>Removendo vários arquivos</p>
+        <pre class="prettyprint">git rm \*</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Movendo Arquivos</h2>
+      <div class="box">
+        <pre class="prettyprint">git mv &lt;arquivo_origem&gt; &lt;arquivo_destino&gt;</pre>
+      </div>
     </article>
   </slide>
 
+  <!-- Ignorando Arquivos -->
   <slide class="fill nobackground">
     <article>
-      <pre class="prettyprint">git add arquivo.txt
-git commit -m "Mensagem"</pre>
+      <h2 style="margin-top: 210px;">Ignorando Arquivos</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <div class="box">
+        <p>Para ignorar arquivos você deve criar um arquivo chamado <b>.gitignore</b> dentro do seu repositório.</p>
+        <pre class="prettyprint" style="margin-top: 10px;">#Ignorar arquivos específicos<br>.DS_Store <br><br>#Ignorar arquivos de um diretório <br>log/* <br><br>#Ignorar arquivos e diretórios de um diretório <br>temp/**/*</pre>
+      </div>
     </article>
   </slide>
 
+  <!-- Visualizando Suas Mudanças  -->
   <slide class="fill nobackground">
     <article>
-      <pre class="prettyprint">git log</pre>
-      
-      <p>Mostra o que foi modificado em cada commit</p>
-      <pre class="prettyprint">git log --stat</pre>
+      <h2 class="title-xmin">Visualizando Mudanças</h2>
+      <div class="box">
+        <pre class="prettyprint">git diff</pre>
+        <p>Mostrar as <b>linhas exatas</b> que foram adicionadas e removidas</p>
+      </div>
+      <div class="box">
+        <pre class="prettyprint">git diff &lt;arquivo&gt;</pre>
+        <p>Mostra as alterações específicas de um arquivo</p>
+      </div>
+    </article>
+  </slide>
 
-      <p>Mostra gráfico do log</p>
-      <pre class="prettyprint">git log --graph</pre>
+  <!-- Fazendo Commit -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Fazendo Commit</h2>
+      <div class="box">
+        <pre class="prettyprint">git commit -m "Descricao do commit."</pre>
+        <p>Grava as alterações no repositório.</p>
+      </div>
+    </article>
+  </slide>
+
+  <!-- Git log -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git log</h2>
+      <div class="box">
+        <pre class="prettyprint">git log</pre>
+      </div>
+      <div class="box">
+        <p>Mostra o que foi modificado em cada commit</p>
+        <pre class="prettyprint">git log --stat</pre>
+      </div>
+      <div class="box">
+        <p>Mostra gráfico do log</p>
+        <pre class="prettyprint">git log --graph</pre>
+      </div>
+    </article>
+  </slide>
+
+  <!-- Desfazendo Coisas -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Desfazendo Coisas</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Alterando o commit</h2>
+      <div class="box">
+        <pre class="prettyprint">git commit -m --amend </pre>
+      </div>
+      <div class="box">
+        <pre class="prettyprint">git commit -m "Nova mensagem" --amend </pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Adicionando arquivos em um commit</h2>
+      <div class="box">
+        <pre class="prettyprint">git add README.md<br>git commit -m --amend </pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Tirando o commit da área de seleção</h2>
+      <div class="box">
+        <pre class="prettyprint">git reset HEAD &lt;arquivo&gt;</pre>
+      </div>
+      <div class="box">
+        <pre class="prettyprint">git reset HEAD \*</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Desfazendo as modificações de um arquivo</h2>
+      <div class="box">
+        <pre class="prettyprint">git checkout -- &lt;arquivo&gt;</pre>
+      </div>
     </article>
   </slide>
 
