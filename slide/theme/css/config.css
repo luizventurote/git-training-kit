@@ -155,3 +155,20 @@ h2 {
 	font-size: 1.8em;
 	margin-bottom: 50px;
 }
+
+/* Lightbox */
+.lightbox {
+	width: 900px;
+	text-align: center;
+	padding: 40px 0 !important;
+	margin: 0;
+	margin-top: 550px;
+	margin-left: -60px;
+	display: block;
+	font-size: 1.5em;
+	background: rgba(0,0,0,0.9);
+	color: #fff;
+} 
+.lightbox:hover {
+	color: #eee !important;	
+}
