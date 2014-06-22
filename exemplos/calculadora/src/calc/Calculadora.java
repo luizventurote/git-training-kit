@@ -459,7 +459,7 @@ public class Calculadora extends javax.swing.JFrame {
             // Altera o valor do buffer
             tela_value = -tela_value;
         }
-        
+
         switch (this.action) {
 
             // Soma
@@ -490,7 +490,7 @@ public class Calculadora extends javax.swing.JFrame {
         }
 
         tela.setText(Long.toString(result));
-        
+
         // Altera o bloqueio de tela
         this.tela_block = 1;
 
@@ -502,7 +502,16 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_enterActionPerformed
 
     private void btn_cleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cleanActionPerformed
-        // TODO add your handling code here:
+        
+        tela.setText("0");
+        this.buffer = 0;
+        this.action = 0;
+        this.action_block = 0;
+        this.tela_block = 0;
+        this.sinal = 0;
+        
+        this.printLog();
+
     }//GEN-LAST:event_btn_cleanActionPerformed
 
     public static void main(String args[]) {
@@ -516,16 +525,21 @@ public class Calculadora extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -534,7 +548,7 @@ public class Calculadora extends javax.swing.JFrame {
             public void run() {
                 Calculadora cal = new Calculadora();
                 cal.setLocationRelativeTo(null);
-                cal.setVisible(true);    
+                cal.setVisible(true);
             }
         });
     }
