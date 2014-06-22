@@ -7,6 +7,7 @@ public class Calculadora extends javax.swing.JFrame {
     private int action_block = 0;
     private int tela_block = 0;
     private int sinal;
+    private int swap_div = 0;
 
     public Calculadora() {
         initComponents();
@@ -396,7 +397,27 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_0ActionPerformed
 
     private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divActionPerformed
-        // TODO add your handling code here:
+
+        // Swap para auxíliar na divisão
+        this.swap_div = 0;
+        
+        // Guarda o valor da tela no buffer
+        this.buffer = Long.parseLong(this.tela.getText());
+
+        // Altera a ação
+        this.action = 4;
+
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
+
+        // Altera o bloqueio de ação
+        this.action_block = 1;
+
+        // Troca o sinal
+        this.sinal = 0;
+
+        this.printLog();
+        
     }//GEN-LAST:event_btn_divActionPerformed
 
     private void btn_mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mulActionPerformed
@@ -490,6 +511,16 @@ public class Calculadora extends javax.swing.JFrame {
             // Multiplicação
             case 3:
                 result = Processador.multiplicar(this.buffer, tela_value);
+                break;
+            // Divisão
+            case 4:
+                if( this.swap_div == 1 ) {
+                    result = Processador.dividir(tela_value, this.buffer);
+                } else {
+                    result = Processador.dividir(this.buffer, tela_value);
+                    this.swap_div = 1;
+                }
+                
                 break;
         }
 

@@ -61,4 +61,17 @@ public class Processador {
         
     }
     
+    /**
+     * Divisão
+     * 
+     * @param num1
+     * @param num2
+     * @return  Resultado da divisão
+     */
+    public static long dividir(long num1, long num2) {
+        
+        return num1 / num2;
+        
+    }
+    
 }
