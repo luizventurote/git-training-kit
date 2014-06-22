@@ -400,7 +400,24 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_divActionPerformed
 
     private void btn_mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mulActionPerformed
-        // TODO add your handling code here:
+        
+        // Guarda o valor da tela no buffer
+        this.buffer = Long.parseLong(this.tela.getText());
+
+        // Altera a ação
+        this.action = 3;
+
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
+
+        // Altera o bloqueio de ação
+        this.action_block = 1;
+
+        // Troca o sinal
+        this.sinal = 0;
+
+        this.printLog();
+        
     }//GEN-LAST:event_btn_mulActionPerformed
 
     private void btn_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_somaActionPerformed
@@ -470,6 +487,10 @@ public class Calculadora extends javax.swing.JFrame {
             case 2:
                 result = Processador.subtrair(this.buffer, tela_value);
                 break;
+            // Multiplicação
+            case 3:
+                result = Processador.multiplicar(this.buffer, tela_value);
+                break;
         }
 
         if (this.action_block == 1) {
@@ -480,9 +501,18 @@ public class Calculadora extends javax.swing.JFrame {
                 // Altera o valor do buffer
                 this.buffer = -Long.parseLong(this.tela.getText());
             } else {
-
-                // Altera o valor do buffer
-                this.buffer = Long.parseLong(this.tela.getText());
+                
+                if( this.action == 3 ) {
+                    
+                    // Altera o valor do buffer
+                    //this.buffer = Long.parseLong(this.tela.getText());
+                    
+                } else {
+                    
+                    // Altera o valor do buffer
+                    this.buffer = Long.parseLong(this.tela.getText());
+                    
+                }                
             }
 
             // Altera o bloqueio de ação

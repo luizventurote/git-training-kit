@@ -48,4 +48,17 @@ public class Processador {
         
     }
     
+    /**
+     * Multiplicação
+     * 
+     * @param num1
+     * @param num2
+     * @return Resultado da multiplicação
+     */
+    public static long multiplicar(long num1, long num2) {
+        
+        return num1 * num2;
+        
+    }
+    
 }
