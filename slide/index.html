@@ -114,11 +114,64 @@
       <pre class="prettyprint txm">git config --global user.email luizventurote@hotmail.com</pre>
     </article>
   </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Criando atalhos</h2>
+      <p>Atalho "com" para "commit"</p>
+      <pre class="prettyprint">git config alias.com commit</pre>
+      <p>Atalho "co" para "checkout"</p>
+      <pre class="prettyprint">git config alias.co checkout</pre>
+      <p>Atalho "br" para "branch"</p>
+      <pre class="prettyprint">git config alias.br branch</pre>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2>Configuração</h2>
+      <p>Listando as configurações</p>
+      <pre class="prettyprint">git config --list</pre>
+    </article>
+  </slide>
+
+  <!-- Fluxos de Trabalho no Git -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Fluxos de Trabalho</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2 class="title-xmin">Fluxo de Trabalho Centralizado</h2>
+      <img src="images/fluxo-centralizado.png" alt="Fluxo de Trabalho Centralizado" title="Fluxo de Trabalho Centralizado">
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2 class="title-xmin">Fluxo de Trabalho do Gerente de Integração</h2>
+      <img src="images/fluxo-github.png" alt="Fluxo de Trabalho do Gerente de Integração" title="Fluxo de Trabalho do Gerente de Integração">
+    </article>
+  </slide>
+
+  <!-- Fluxos de Trabalho com Branches -->
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2 class="title-min">Fluxo de Trabalho com Branches</h2>
+    </article>
+  </slide>
 
   <!-- Primeiros Passos no Git -->
   <slide class="fill nobackground">
     <article>
       <h2 style="margin-top: 210px;">Primeiros Passos no Git</h2>
+    </article>
+  </slide>
+
+  <!-- Obtendo Ajuda -->
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2 class="title-min">Obtendo Ajuda</h2>
+      <pre class="prettyprint"> git help &lt;verb&gt; </pre>
+      <pre class="prettyprint"> git &lt;verb&gt; --help </pre>
     </article>
   </slide>
 
@@ -191,7 +244,7 @@
     </article>
   </slide>
   <slide class="fill nobackground">
-    <article>
+    <article class="flexbox vcenter">
       <div class="box">
         <p>Para ignorar arquivos você deve criar um arquivo chamado <b>.gitignore</b> dentro do seu repositório.</p>
         <pre class="prettyprint" style="margin-top: 10px;">#Ignorar arquivos específicos<br>.DS_Store <br><br>#Ignorar arquivos de um diretório <br>log/* <br><br>#Ignorar arquivos e diretórios de um diretório <br>temp/**/*</pre>
@@ -219,6 +272,7 @@
     <article>
       <h2 class="title-min">Fazendo Commit</h2>
       <div class="box">
+        <pre class="prettyprint">git commit</pre>
         <pre class="prettyprint">git commit -m "Descricao do commit."</pre>
         <p>Grava as alterações no repositório.</p>
       </div>
@@ -233,12 +287,19 @@
         <pre class="prettyprint">git log</pre>
       </div>
       <div class="box">
-        <p>Mostra o que foi modificado em cada commit</p>
+        <p>Interface gráfica para visualizar logs</p>
         <pre class="prettyprint">git log --stat</pre>
       </div>
+    </article>
+  </slide>
+
+  <!-- Gitk -->
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2 class="title-min">Gitk</h2>
       <div class="box">
-        <p>Mostra gráfico do log</p>
-        <pre class="prettyprint">git log --graph</pre>
+        <pre class="prettyprint">gitk</pre>
+        <p>Exibe as alterações realizadas em um repositório.</p>
       </div>
     </article>
   </slide>
@@ -277,6 +338,24 @@
       </div>
       <div class="box">
         <pre class="prettyprint">git reset HEAD \*</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Voltando commits</h2>
+      <div class="box">
+        <p>Volta ao commit anterior e descarta totalmente o commit atual</p>
+        <pre class="prettyprint">git reset --hard HEAD^</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Voltando commits</h2>
+      <div class="box">
+        <p>Volta ao último commit e mantém os últimos arquivos na Staging area</p>
+        <pre class="prettyprint">git reset HEAD~1 --soft</pre>
       </div>
     </article>
   </slide>
@@ -366,6 +445,15 @@
       <div class="box">
         <p>Deletar branche</p>
         <pre>$ git branch -d &lt;nome_branch&gt;</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Branch</h2>
+      <div class="box">
+        <p>Baixando um branch remoto</p>
+        <pre>git checkout -b &lt;branch-name&gt; origin/&lt;branch-name&gt;</pre>
       </div>
     </article>
   </slide>
