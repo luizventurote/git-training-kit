@@ -7,6 +7,7 @@ public class Calculadora extends javax.swing.JFrame {
     private int action_block = 0;
     private int tela_block = 0;
     private int sinal;
+    private int swap_div = 0;
 
     public Calculadora() {
         initComponents();
@@ -396,11 +397,48 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_0ActionPerformed
 
     private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divActionPerformed
-        // TODO add your handling code here:
+
+        // Swap para auxíliar na divisão
+        this.swap_div = 0;
+        
+        // Guarda o valor da tela no buffer
+        this.buffer = Long.parseLong(this.tela.getText());
+
+        // Altera a ação
+        this.action = 4;
+
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
+
+        // Altera o bloqueio de ação
+        this.action_block = 1;
+
+        // Troca o sinal
+        this.sinal = 0;
+
+        this.printLog();
+        
     }//GEN-LAST:event_btn_divActionPerformed
 
     private void btn_mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mulActionPerformed
-        // TODO add your handling code here:
+        
+        // Guarda o valor da tela no buffer
+        this.buffer = Long.parseLong(this.tela.getText());
+
+        // Altera a ação
+        this.action = 3;
+
+        // Altera o bloqueio de tela
+        this.tela_block = 1;
+
+        // Altera o bloqueio de ação
+        this.action_block = 1;
+
+        // Troca o sinal
+        this.sinal = 0;
+
+        this.printLog();
+        
     }//GEN-LAST:event_btn_mulActionPerformed
 
     private void btn_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_somaActionPerformed
@@ -459,7 +497,7 @@ public class Calculadora extends javax.swing.JFrame {
             // Altera o valor do buffer
             tela_value = -tela_value;
         }
-        
+
         switch (this.action) {
 
             // Soma
@@ -469,6 +507,20 @@ public class Calculadora extends javax.swing.JFrame {
             // Subtração
             case 2:
                 result = Processador.subtrair(this.buffer, tela_value);
+                break;
+            // Multiplicação
+            case 3:
+                result = Processador.multiplicar(this.buffer, tela_value);
+                break;
+            // Divisão
+            case 4:
+                if( this.swap_div == 1 ) {
+                    result = Processador.dividir(tela_value, this.buffer);
+                } else {
+                    result = Processador.dividir(this.buffer, tela_value);
+                    this.swap_div = 1;
+                }
+                
                 break;
         }
 
@@ -480,9 +532,18 @@ public class Calculadora extends javax.swing.JFrame {
                 // Altera o valor do buffer
                 this.buffer = -Long.parseLong(this.tela.getText());
             } else {
-
-                // Altera o valor do buffer
-                this.buffer = Long.parseLong(this.tela.getText());
+                
+                if( this.action == 3 ) {
+                    
+                    // Altera o valor do buffer
+                    //this.buffer = Long.parseLong(this.tela.getText());
+                    
+                } else {
+                    
+                    // Altera o valor do buffer
+                    this.buffer = Long.parseLong(this.tela.getText());
+                    
+                }                
             }
 
             // Altera o bloqueio de ação
@@ -490,7 +551,7 @@ public class Calculadora extends javax.swing.JFrame {
         }
 
         tela.setText(Long.toString(result));
-        
+
         // Altera o bloqueio de tela
         this.tela_block = 1;
 
@@ -502,7 +563,16 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_enterActionPerformed
 
     private void btn_cleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cleanActionPerformed
-        // TODO add your handling code here:
+        
+        tela.setText("0");
+        this.buffer = 0;
+        this.action = 0;
+        this.action_block = 0;
+        this.tela_block = 0;
+        this.sinal = 0;
+        
+        this.printLog();
+
     }//GEN-LAST:event_btn_cleanActionPerformed
 
     public static void main(String args[]) {
@@ -516,23 +586,30 @@ public class Calculadora extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calculadora.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Calculadora().setVisible(true);
+                Calculadora cal = new Calculadora();
+                cal.setLocationRelativeTo(null);
+                cal.setVisible(true);
             }
         });
     }
