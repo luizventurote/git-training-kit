@@ -157,6 +157,12 @@ h2 {
 	margin-bottom: 50px;
 }
 
+.big-list a, .big-list a:hover {
+	color: #FFF !important;
+	text-decoration: none;
+	border: 0;
+}
+
 /* Lightbox */
 .lightbox {
 	width: 900px;
