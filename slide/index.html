@@ -33,10 +33,19 @@
         <li>Conceitos Iniciais</li>
         <li>Instalação</li>
         <li>Primeiros Passos no Git</li>
-        <!-- <li>Estrutura de um Commit</li> -->
+        <li>Desfazendo Coisas</li>
         <li>Tag, Branch, Merge</li>
+      </ul>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <ul class="build big-list">
         <li>Remotos</li>
-        <li>Conceitos e Comandos extras</li>
+        <li>Trabalhando com Remotos</li>
+        <li>Fluxos de Trabalho</li>
+        <li>Fluxo de Trabalho com Branches</li>
+        <li>Considerações Finais</li>
       </ul>
     </article>
   </slide>
@@ -90,10 +99,16 @@
   <slide class="fill nobackground" style="background-image: url(images/slides/install-win-4.png)"></slide>
   <slide class="fill nobackground" style="background-image: url(images/slides/install-win-5.png)"></slide>
   <slide class="fill nobackground" style="background-image: url(images/slides/install-win-6.png)"></slide>
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2>MAC</h2>
+    </article>
+  </slide>
   <slide class="fill nobackground" style="background-image: url(images/slides/mac-install.png)"></slide>
-  <slide class="fill nobackground" style="background-image: url(images/slides/linux-install.png)">
-    <article>
-      <pre class="prettyprint language-bsh" style="margin-top: 150px">$ apt-get install git</pre>
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <h2>Linux</h2>
+      <pre class="prettyprint language-bsh">$ apt-get install git</pre>
     </article>
   </slide>
   <slide class="fill nobackground" style="background-image: url(images/slides/bash.png)"></slide>
@@ -118,11 +133,11 @@
     <article>
       <h2 class="title-min">Criando atalhos</h2>
       <p>Atalho "com" para "commit"</p>
-      <pre class="prettyprint">git config alias.com commit</pre>
+      <pre class="prettyprint">git config --global alias.com commit</pre>
       <p>Atalho "co" para "checkout"</p>
-      <pre class="prettyprint">git config alias.co checkout</pre>
+      <pre class="prettyprint">git config --global alias.co checkout</pre>
       <p>Atalho "br" para "branch"</p>
-      <pre class="prettyprint">git config alias.br branch</pre>
+      <pre class="prettyprint">git config --global alias.br branch</pre>
     </article>
   </slide>
   <slide class="fill nobackground">
@@ -157,6 +172,7 @@
       <pre class="prettyprint">cd meuprojeto<br>git init</pre>
     </article>
   </slide>
+
   <!-- Ciclo de vida dos arquivos -->
   <slide class="fill nobackground">
     <article>
@@ -278,6 +294,9 @@
     </article>
   </slide>
 
+  
+  <slide class="fill nobackground" style="background-image: url(images/slides/slide-1.png)"></slide>
+  
   <!-- Desfazendo Coisas -->
   <slide class="fill nobackground" style="background-image: url(images/gif/frustated.gif)"></slide>
   <slide class="fill nobackground">
@@ -293,6 +312,7 @@
       </div>
       <div class="box">
         <pre class="prettyprint">git commit -m "Nova mensagem" --amend </pre>
+        <p>Não altere seu último commit se você já fez o <b>push</b> dele.</p>
       </div>
     </article>
   </slide>
@@ -342,13 +362,6 @@
     </article>
   </slide>
 
-  <!-- Estrutura de um Commit -->
-  <!-- <slide class="fill nobackground">
-    <article>
-      <h2 style="margin-top: 210px;">Estrutura de um Commit</h2>
-    </article>
-  </slide> -->
-
   <!-- Tags -->
   <slide class="fill nobackground">
     <article>
@@ -369,7 +382,7 @@
         <pre>$ git tag <br>v0.1 <br>v1.3 </pre>
       </div>
       <div class="box">
-        <p>Crie uma tag</p>
+        <p>Criando uma tag</p>
         <pre>$ git tag -a v1.4 -m 'my version 1.4' <br>$ git tag <br>v0.1 <br>v1.3 <br>v1.4</pre>
       </div>
     </article>
@@ -451,22 +464,24 @@
       </div>
     </article>
   </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Resolvendo conflitos</h2>
+      <div class="box">
+        <p style="font-size:0.9em">Git adiciona marcadores padrão de resolução de conflitos nos arquivos que têm conflitos, para que você possa abri-los manualmente e resolver esses conflitos.</p>
+        <pre><b><<<<<<<</b> HEAD:index.html
+Meu site
+<b>=======</b>
+Site novo
+<b>>>>>>>></b> dev:index.html</pre>
+      </div>
+    </article>
+  </slide>
 
   <!-- Git Remoto -->
   <slide class="fill nobackground">
     <article>
       <h2 style="margin-top: 210px;">Git Remoto</h2>
-    </article>
-  </slide>
-  <slide class="fill nobackground">
-    <article>
-      <h2 class="title-min">Os Protocolos</h2>
-      <ul class="big-list">
-        <li>Protocolo Local</li>
-        <li>Secure Shell (SSH)</li>
-        <li>Protocolo Git</li>
-        <li>HTTP/S Protocol</li>
-      </ul>
     </article>
   </slide>
 
@@ -491,16 +506,152 @@
     </article>
   </slide>
 
-  <!-- GUI -->
+  <!-- Trabalhando com Remotos -->
   <slide class="fill nobackground">
     <article>
-      <h2 class="title-min">GUI</h2>
+      <h2 style="margin-top: 210px;">Trabalhando com Remotos</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Repositórios remotos</h2>
+      <p>Repositórios remotos são versões do seu projeto que estão hospedados na Internet ou em uma rede em algum lugar.</p>
+    </article>
+  </slide> 
+
+  <!-- Os Protocolos -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Os Protocolos</h2>
+      <ul class="big-list">
+        <li>Protocolo Local</li>
+        <li>Secure Shell (SSH)</li>
+        <li>Protocolo Git</li>
+        <li>HTTP/S Protocol</li>
+      </ul>
+    </article>
+  </slide> 
+
+  <!-- Git Clone -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git clone</h2>
       <div class="box">
-        <pre>$ git gui</pre>
+        <p>Copia um repositório Git já existente</p>
+        <pre>$ git clone [url]</pre>
       </div>
       <div class="box">
-        <pre>$ gitk</pre>
+        <p>Copia um repositório para um diretório específico</p>
+        <pre>$ git clone [url] [diretório]</pre>
       </div>
+    </article>
+  </slide> 
+
+  <!-- Git Remote -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git remote</h2>
+      <div class="box">
+        <p>Exibindo seus remotos</p>
+        <pre>$ git remote <br>origin</pre>
+      </div>
+      <div class="box">
+        <p>Exibe a URL do remoto</p>
+        <pre>$ git remote -v <br><span style="font-size: 0.8em">origin  git@github.com:luizventurote/git-training-kit.git (fetch) <br>origin  git@github.com:luizventurote/git-training-kit.git (push)</span></pre>
+      </div>
+    </article>
+  </slide> 
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git remote</h2>
+      <div class="box">
+        <p>Adicionando repositórios remotos</p>
+        <pre>$ git remote add [nome] [url]</pre>
+      </div>
+      <div class="box">
+        <p>Removendo repositórios remotos</p>
+        <pre>$ git remote rm [nome]</pre>
+      </div>
+    </article>
+  </slide> 
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git remote</h2>
+      <div class="box">
+        <p>Renomeando repositórios remotos</p>
+        <pre>$ git remote rename [old_name] [new_name]</pre>
+      </div>
+      <div class="box">
+        <p>Inspecionando um Remoto</p>
+        <pre>$ git remote show [nome-remoto]</pre>
+      </div>
+    </article>
+  </slide> 
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git remote</h2>
+      <div class="box">
+        <p>Pegando dados dos projetos remotos</p>
+        <pre>$ git fetch [nome-remoto]</pre>
+        <p style="font-size: 0.8em">o comando fetch traz os dados para o seu repositório local — ele não faz o merge automaticamente com o seus dados ou modifica o que você está trabalhando atualmente. Você terá que fazer o <b>merge manualmente</b> no seu trabalho quando estiver pronto.</p>
+      </div>
+    </article>
+  </slide> 
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Git remote</h2>
+      <div class="box">
+        <p>Fazendo o <b>fetch e o merge</b> de um branch remoto no seu branch atual</p>
+        <pre>$ git pull [remote]</pre>
+      </div>
+      <div class="box">
+        <p>Enviando alterações para os remotos</p>
+        <pre>git push [nome-remoto] [branch]</pre>
+      </div>
+    </article>
+  </slide> 
+
+  <!-- Chaves SSH -->
+  <slide class="fill nobackground">
+    <article>
+      <h2 style="margin-top: 210px;">Chaves SSH</h2>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Chave SSH</h2>
+      <div class="box">
+        <p>Verificando se já existe uma chave</p>
+        <pre>$ cd ~/.ssh <br>$ ls -al</pre>
+      </div>
+      <div class="box">
+        <p>Gerando uma nova chave</p>
+        <pre>$ ssh-keygen -t rsa -C "your_email@example.com"
+<span style="font-size: 0.7em"># Creates a new ssh key, using the provided email as a label
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): <b>[Press enter]</b></span></pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground">
+    <article>
+      <h2 class="title-min">Chave SSH</h2>
+      <div class="box">
+        <p>Configurando a senha da chave ssh</p>
+        <pre style="font-size: 0.8em">Enter passphrase (empty for no passphrase): <b>[Type a passphrase]</b> <br>Enter same passphrase again: <b>[Type passphrase again]</b></pre>
+      </div>
+      <div class="box">
+        <p>Mensagem gerada ao concluir</p>
+        <pre style="font-size: 0.7em">Your identification has been saved in /c/Users/you/.ssh/id_rsa.
+Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</pre>
+      </div>
+    </article>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/github-ssh-keys.png)">
+    <article>
+      <a href="https://help.github.com/articles/generating-ssh-keys" style="font-size: 1.3em" class="lightbox">help.github.com/articles/generating-ssh-keys</a>
     </article>
   </slide>
 

@@ -153,6 +153,7 @@ h2 {
 /* Lists */
 .big-list li {
 	font-size: 1.8em;
+	line-height: 1em;
 	margin-bottom: 50px;
 }
 
